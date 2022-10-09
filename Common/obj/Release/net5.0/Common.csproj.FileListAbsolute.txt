@@ -1,0 +1,12 @@
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/Common.csproj.AssemblyReference.cache
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/Common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/Common.AssemblyInfoInputs.cache
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/Common.AssemblyInfo.cs
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/Common.csproj.CoreCompileInputs.cache
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/Common.dll
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/refint/Common.dll
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/Common.pdb
+/Users/tbmh/Downloads/searchengine-main/Common/bin/Release/net5.0/Common.deps.json
+/Users/tbmh/Downloads/searchengine-main/Common/bin/Release/net5.0/Common.dll
+/Users/tbmh/Downloads/searchengine-main/Common/bin/Release/net5.0/Common.pdb
+/Users/tbmh/Downloads/searchengine-main/Common/obj/Release/net5.0/ref/Common.dll

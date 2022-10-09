@@ -1,0 +1,32 @@
+version: "3.2"
+
+services:
+  indexer:
+    build:
+      context: .
+      dockerfile: Indexer/Dockerfile
+    image: boulundeasv/searchengine-indexer:$BUILD_NUMBER
+    volumes:
+      - /Users/tbmh/DLS:/data
+  api:
+    build: 
+      context: .
+      dockerfile: "SearchAPI/Dockerfile"
+    image: boulundeasv/searchengine-api:$BUILD_NUMBER
+    ports:
+      - 8071:80
+    volumes:
+      - /Users/tbmh/DLS:/data
+  web:
+    build: 
+      context: .
+      dockerfile: "WebSearch/Dockerfile"
+    image: boulundeasv/searchengine-web:$BUILD_NUMBER
+    ports:
+      - 8070:80
+  test:
+    build:
+      context: .
+      dockerfile: "TestProject/Dockerfile"
+    volumes:
+      - /Users/tbmh/DLS:/data
