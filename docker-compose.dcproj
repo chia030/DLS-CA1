@@ -6,7 +6,7 @@
     <ProjectGuid>aa673140-7c36-4716-b5b5-e30f8eb06cdb</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>websearch</DockerServiceName>
+    <DockerServiceName>SearchEngine</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
