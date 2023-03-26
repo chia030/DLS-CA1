@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "xB7+tA3DeLoW6xLEI3TM/96MkJ+hvqe+AZWfwPlj0YlH/xO/v7tgmVqXj4PYHGhcuRlTCWUbS39kokMYDCo3+A==",
+  "dgSpecHash": "xqiyge3xd0bQI7BsyrL4NWasO3Xq9r9n1/KwS760f1ITqbtlEP6f2gNtkwjzb3GbUg9m1gRTtwQ9pypXvH4AAw==",
   "success": true,
-  "projectFilePath": "/Users/tbmh/Downloads/searchengine-main/Indexer/Indexer.csproj",
+  "projectFilePath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\Indexer\\Indexer.csproj",
   "expectedPackageFiles": [
-    "/Users/tbmh/.nuget/packages/microsoft.data.sqlite/6.0.2/microsoft.data.sqlite.6.0.2.nupkg.sha512",
-    "/Users/tbmh/.nuget/packages/microsoft.data.sqlite.core/6.0.2/microsoft.data.sqlite.core.6.0.2.nupkg.sha512",
-    "/Users/tbmh/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.6/sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
-    "/Users/tbmh/.nuget/packages/sqlitepclraw.core/2.0.7/sqlitepclraw.core.2.0.7.nupkg.sha512",
-    "/Users/tbmh/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.6/sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
-    "/Users/tbmh/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.0.6/sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
-    "/Users/tbmh/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.data.sqlite\\6.0.2\\microsoft.data.sqlite.6.0.2.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.2\\microsoft.data.sqlite.core.6.0.2.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\sqlitepclraw.core\\2.0.7\\sqlitepclraw.core.2.0.7.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.6\\sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }

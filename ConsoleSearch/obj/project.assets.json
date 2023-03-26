@@ -21,19 +21,27 @@
           "SQLitePCLRaw.core": "2.0.6"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.6": {
@@ -333,32 +341,35 @@
     ]
   },
   "packageFolders": {
-    "/Users/tbmh/.nuget/packages/": {}
+    "C:\\Users\\Chiara\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tbmh/Downloads/searchengine-main/ConsoleSearch/ConsoleSearch.csproj",
+      "projectUniqueName": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\ConsoleSearch\\ConsoleSearch.csproj",
       "projectName": "ConsoleSearch",
-      "projectPath": "/Users/tbmh/Downloads/searchengine-main/ConsoleSearch/ConsoleSearch.csproj",
-      "packagesPath": "/Users/tbmh/.nuget/packages/",
-      "outputPath": "/Users/tbmh/Downloads/searchengine-main/ConsoleSearch/obj/",
+      "projectPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\ConsoleSearch\\ConsoleSearch.csproj",
+      "packagesPath": "C:\\Users\\Chiara\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\ConsoleSearch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/tbmh/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Chiara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.powershellgallery.com/api/v2": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/tbmh/Downloads/searchengine-main/Common/Common.csproj": {
-              "projectPath": "/Users/tbmh/Downloads/searchengine-main/Common/Common.csproj"
+            "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\Common\\Common.csproj"
             }
           }
         }
@@ -392,14 +403,27 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.NETCore.App.Host.osx-x64",
-            "version": "[5.0.15, 5.0.15]"
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
           }
         ],
         "frameworkReferences": {
@@ -407,7 +431,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

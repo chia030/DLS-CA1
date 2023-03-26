@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0GKJDn5bdnprUjtn1XsjF+ERkMuUalsbrrArIrbOFok8FN7aXg9nxqEloOtatKMAifHYscTjr69xrCAlDUFCnQ==",
+  "dgSpecHash": "imI6nwYbkmVbU8Jk+CJCcRKEthAw6zfEmmmTZe0ZZ3+A3KqvIihdLFPiBIuarHuJbbXLZgIDTCNlh0boxS6NNA==",
   "success": true,
-  "projectFilePath": "/Users/tbmh/Downloads/searchengine-main/WebSearch/WebSearch.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\WebSearch\\WebSearch.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
+  ],
   "logs": []
 }

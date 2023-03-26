@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gn0cTDyoCpQU3iQyoVNJa4I+mTakwbKLYO57DZwAay4hXV9Ji7St7zIL55ep8T/lhFqvoLUJiisuTjVt4PWD3w==",
+  "dgSpecHash": "31lLkeJqsoX0jfFmxtIpVhK6941BBkCYAXDsYWkNX4o9Jg/Utx1YuoKdr3N5AIth5YZTOfDHKtUBVoi4elRv5w==",
   "success": true,
-  "projectFilePath": "/Users/tbmh/Downloads/searchengine-main/Common/Common.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
