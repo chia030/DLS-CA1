@@ -11,6 +11,7 @@
           "Microsoft.NET.Test.Sdk": "16.11.0",
           "NUnit": "3.13.2",
           "NUnit3TestAdapter": "4.0.0",
+          "Newtonsoft.Json": "13.0.1",
           "SearchAPI": "1.0.0",
           "coverlet.collector": "3.1.0"
         },

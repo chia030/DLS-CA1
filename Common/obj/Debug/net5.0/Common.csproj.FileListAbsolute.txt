@@ -10,3 +10,15 @@
 /Users/tbmh/Downloads/searchengine-main/Common/obj/Debug/net5.0/refint/Common.dll
 /Users/tbmh/Downloads/searchengine-main/Common/obj/Debug/net5.0/Common.pdb
 /Users/tbmh/Downloads/searchengine-main/Common/obj/Debug/net5.0/ref/Common.dll
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\bin\Debug\net5.0\Common.deps.json
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\bin\Debug\net5.0\Common.dll
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\bin\Debug\net5.0\Common.pdb
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\Common.csproj.AssemblyReference.cache
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\Common.AssemblyInfoInputs.cache
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\Common.AssemblyInfo.cs
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\Common.dll
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\refint\Common.dll
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\Common.pdb
+C:\Users\Chiara\Source\Repos\DLS-CA1\Common\obj\Debug\net5.0\ref\Common.dll

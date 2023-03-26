@@ -74,6 +74,65 @@
         }
       }
     },
+    "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\LoadBalancer\\LoadBalancer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\LoadBalancer\\LoadBalancer.csproj",
+        "projectName": "LoadBalancer",
+        "projectPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\LoadBalancer\\LoadBalancer.csproj",
+        "packagesPath": "C:\\Users\\Chiara\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\LoadBalancer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Chiara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.powershellgallery.com/api/v2": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\SearchAPI\\SearchAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -101,6 +160,9 @@
             "projectReferences": {
               "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\Common\\Common.csproj": {
                 "projectPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\Common\\Common.csproj"
+              },
+              "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\LoadBalancer\\LoadBalancer.csproj": {
+                "projectPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\LoadBalancer\\LoadBalancer.csproj"
               }
             }
           }
@@ -122,6 +184,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[109.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

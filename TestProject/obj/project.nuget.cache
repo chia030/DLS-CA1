@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4X8a+W7JaGxoTtpBgGZ2KNf9QMBO/vUjXy1FAJW5rh71m9v+VJNQvzxrcl6qMkoEwmB2UK5JgB45o3n51eUFng==",
+  "dgSpecHash": "5qKdftpH7FwPPh7qGVaKQAz/Atom+QP4IT5ApRJlMHhTFlgoP/1bKGpr5W9qbJrVNLQxQQeZw3cmhkgnhJikIQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Chiara\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
     "C:\\Users\\Chiara\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512",
     "C:\\Users\\Chiara\\.nuget\\packages\\nunit3testadapter\\4.0.0\\nunit3testadapter.4.0.0.nupkg.sha512",
+    "C:\\Users\\Chiara\\.nuget\\packages\\restsharp\\109.0.1\\restsharp.109.0.1.nupkg.sha512",
     "C:\\Users\\Chiara\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\Chiara\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\Chiara\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",

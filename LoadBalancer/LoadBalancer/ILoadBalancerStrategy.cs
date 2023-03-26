@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using LoadBalancer.Models;
 
 namespace LoadBalancer.LoadBalancer
 {
     public interface ILoadBalancerStrategy
     {
-        public string NextService(List<string> services);
+        public Service NextService(List<Service> services);
     }
 }

@@ -417,6 +417,19 @@
           "build/netcoreapp2.1/NUnit3TestAdapter.props": {}
         }
       },
+      "RestSharp/109.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.6": {
         "type": "package",
         "dependencies": {
@@ -621,13 +634,28 @@
           "bin/placeholder/Common.dll": {}
         }
       },
+      "LoadBalancer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/LoadBalancer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LoadBalancer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "SearchAPI/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Common": "1.0.0",
+          "LoadBalancer": "1.0.0",
           "Microsoft.Data.Sqlite": "6.0.8",
           "Newtonsoft.Json": "13.0.1",
+          "RestSharp": "109.0.1",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "compile": {
@@ -1571,6 +1599,26 @@
         "nunit3testadapter.nuspec"
       ]
     },
+    "RestSharp/109.0.1": {
+      "sha512": "OkJ23uaV8qwCKuR7RKBUFlnXxIDZ7P1jEaoDawXgysujIcWZgIwE6p90kJZxY9EVv9ESjZtGlSmP8k+kOfDH9g==",
+      "type": "package",
+      "path": "restsharp/109.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/RestSharp.dll",
+        "lib/net471/RestSharp.xml",
+        "lib/net6.0/RestSharp.dll",
+        "lib/net6.0/RestSharp.xml",
+        "lib/net7.0/RestSharp.dll",
+        "lib/net7.0/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.109.0.1.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.6": {
       "sha512": "zssYqiaucyGArZfg74rJuzK0ewgZiidsRVrZTmP7JLNvK806gXg6PGA46XzoJGpNPPA5uRcumwvVp6YTYxtQ5w==",
       "type": "package",
@@ -1772,6 +1820,11 @@
       "type": "project",
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
+    },
+    "LoadBalancer/1.0.0": {
+      "type": "project",
+      "path": "../LoadBalancer/LoadBalancer.csproj",
+      "msbuildProject": "../LoadBalancer/LoadBalancer.csproj"
     },
     "SearchAPI/1.0.0": {
       "type": "project",

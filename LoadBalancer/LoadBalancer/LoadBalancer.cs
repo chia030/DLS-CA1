@@ -1,33 +1,38 @@
 ﻿using LoadBalancer.LoadBalancer;
 using System.Collections.Generic;
+using LoadBalancer.Models;
 
 namespace LoadBalancer.LoadBalancer
 {
     public class LoadBalancer : ILoadBalancer
     {
         private ILoadBalancerStrategy _strategy;
-        private List<string> _services;
+        private readonly Dictionary<Guid, Service> _services = new();
+        public static LoadBalancer? _instance;
 
-        public LoadBalancer(ILoadBalancerStrategy strategy)
+        private LoadBalancer()
+        { }
+
+        public static LoadBalancer GetInstance()
         {
-            _strategy = strategy;
-            _services = new List<string>();
+            return _instance ??= new LoadBalancer();
         }
 
-        public List<string> GetAllServices()
+        public List<Service> GetAllServices()
         {
-            return _services;
+            return _services.Values.ToList();
         }
 
-        public int AddService(string url)
+        public Guid AddService(string url)
         {
-            _services.Add(url);
-            return _services.Count - 1;
+            var service = new Service(url);
+            _services.Add(service.Id, service);
+            return service.Id;
         }
 
-        public int RemoveService(int id)
+        public Guid RemoveService(Guid id)
         {
-            _services.RemoveAt(id);
+            _services.Remove(id);
             return id;
         }
 
@@ -41,9 +46,9 @@ namespace LoadBalancer.LoadBalancer
             _strategy = strategy;
         }
 
-        public string NextService()
+        public Service? NextService()
         {
-            return _strategy.NextService(_services);
+            return _strategy?.NextService(GetAllServices());
         }
     }
 }
