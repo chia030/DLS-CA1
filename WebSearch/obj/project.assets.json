@@ -100,19 +100,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chiara\\.nuget\\packages\\": {}
+    "C:\\Users\\CVI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\WebSearch\\WebSearch.csproj",
+      "projectUniqueName": "C:\\Users\\CVI\\Source\\Repos\\DLS-CA1\\WebSearch\\WebSearch.csproj",
       "projectName": "WebSearch",
-      "projectPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\WebSearch\\WebSearch.csproj",
-      "packagesPath": "C:\\Users\\Chiara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\WebSearch\\obj\\",
+      "projectPath": "C:\\Users\\CVI\\Source\\Repos\\DLS-CA1\\WebSearch\\WebSearch.csproj",
+      "packagesPath": "C:\\Users\\CVI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CVI\\Source\\Repos\\DLS-CA1\\WebSearch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Chiara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\CVI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -120,8 +120,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.powershellgallery.com/api/v2": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -163,7 +162,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

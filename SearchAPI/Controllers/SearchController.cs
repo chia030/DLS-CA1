@@ -1,8 +1,10 @@
 using System.Threading.Tasks;
+using System.Data;
 using LoadBalancer.LoadBalancer;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestSharp;
+using MySqlConnector;
 
 namespace SearchAPI.Controllers
 {
@@ -10,48 +12,12 @@ namespace SearchAPI.Controllers
     [Route("search")]
     public class SearchController : ControllerBase
     {
+        //maybe this is not needed
+        // private IDbConnection searchDBConnection = new MySqlConnection("Server=search-db;Database=search-database;Uid=div-search;Pwd=s3@rchd1v;");
+        // private readonly RestClient _restClient = new();
+        // private readonly ILoadBalancer _loadBalancer = LoadBalancer.LoadBalancer.LoadBalancer.GetInstance();
         private static SearchLogic searchLogic = new SearchLogic(new Database());
-        private readonly RestClient _restClient = new();
-        private readonly ILoadBalancer _loadBalancer = LoadBalancer.LoadBalancer.LoadBalancer.GetInstance();
-
-
-        // [HttpGet]
-        // public async Task<ActionResult<int>> Get(long number)
-        // {
-        //     var result = await CallService<int>("/Cache?number=" + number, Method.Get);
-        //     return result;
-        // }
-        //
-        // [HttpPost]
-        // public async Task<ActionResult<object>> Post([FromQuery] long number, [FromQuery] int divisorCounter)
-        // {
-        //     return await CallService<object>("/Cache?number=" + number + "&divisorCounter=" + divisorCounter, Method.Post);
-        // }
-        //
-        // private async Task<ActionResult<TResult>> CallService<TResult>(
-        //     string url, Method method
-        // )
-        // {
-        //     var service = _loadBalancer.NextService();
-        //     if (service == null)
-        //     {
-        //         return StatusCode(503);
-        //     }
-        //
-        //     var result = await _restClient.ExecuteAsync<TResult>(
-        //         new RestRequest(service.Url + url), method
-        //     );
-        //     int statusCode = (int)result.StatusCode;
-        //     if (statusCode is 0 or >= 500)
-        //     {
-        //         Console.WriteLine("Service at URL " + service.Url + "returned status code " + (int)result.StatusCode + " and will be removed.");
-        //         _loadBalancer.RemoveService(service.Id);
-        //         return await CallService<TResult>(url, method);
-        //     }
-        //
-        //     return Ok(result.Data);
-        // }
-
+    
         [HttpGet]
         [Route("{query}/{maxAmount}")]
         public async Task<string> SearchByQuery(string query, int maxAmount)

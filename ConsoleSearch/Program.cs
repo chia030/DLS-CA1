@@ -4,7 +4,12 @@ namespace ConsoleSearch
 {
     class Program
     {
-        static void Main(string[] args)
+        // static async void Main(string[] args)
+        // {
+        //     await new App().RunAsync();
+        // }
+
+         static void Main(string[] args)
         {
             new App().Run();
         }

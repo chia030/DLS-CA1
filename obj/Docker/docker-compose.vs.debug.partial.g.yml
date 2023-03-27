@@ -1,0 +1,108 @@
+version: '3.4'
+
+services:
+  console-search:
+    image: consolesearch:dev
+    container_name: ConsoleSearch
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "ConsoleSearch"
+    #environment:
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_console-search$
+    volumes:
+      - C:\Users\CVI\source\repos\DLS-CA1\ConsoleSearch:/app
+      - C:\Users\CVI\source\repos\DLS-CA1:/src
+      - C:\Users\CVI\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_console-search$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_console-search$ \"/app/bin/Debug/net6.0/ConsoleSearch.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  load-balancer:
+    image: loadbalancer:dev
+    container_name: LoadBalancer
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "LoadBalancer"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_load-balancer$
+    volumes:
+      - C:\Users\CVI\source\repos\DLS-CA1\LoadBalancer:/app
+      - C:\Users\CVI\source\repos\DLS-CA1:/src
+      - C:\Users\CVI\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_load-balancer$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_load-balancer$ \"/app/bin/Debug/net6.0/LoadBalancer.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  search-api:
+    image: searchapi:dev
+    container_name: SearchAPI
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "SearchAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_search-api$
+    volumes:
+      - C:\Users\CVI\source\repos\DLS-CA1\SearchAPI:/app
+      - C:\Users\CVI\source\repos\DLS-CA1:/src
+      - C:\Users\CVI\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_search-api$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_search-api$ \"/app/bin/Debug/net6.0/SearchAPI.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  web-search:
+    image: websearch:dev
+    container_name: WebSearch
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "WebSearch"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_web-search$
+    volumes:
+      - C:\Users\CVI\source\repos\DLS-CA1\WebSearch:/app
+      - C:\Users\CVI\source\repos\DLS-CA1:/src
+      - C:\Users\CVI\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_web-search$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_web-search$ \"/app/bin/Debug/net6.0/WebSearch.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

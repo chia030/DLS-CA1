@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LoadBalancer.Controllers
 {
+    [ApiController]
+    [Route("configuration")]
     public class ConfigurationController : ControllerBase
     {
         public ConfigurationController()

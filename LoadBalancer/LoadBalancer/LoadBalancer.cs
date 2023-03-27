@@ -6,7 +6,7 @@ namespace LoadBalancer.LoadBalancer
 {
     public class LoadBalancer : ILoadBalancer
     {
-        private ILoadBalancerStrategy _strategy;
+        private ILoadBalancerStrategy? _strategy;
         private readonly Dictionary<Guid, Service> _services = new();
         public static LoadBalancer? _instance;
 

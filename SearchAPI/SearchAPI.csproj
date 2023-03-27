@@ -5,18 +5,23 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    </PropertyGroup>
+        <TargetName>$(MSBuildProjectName)</TargetName>
+        <OutputPath>$(OutputPath)/$(MSBuildProjectName)/</OutputPath>
+    </PropertyGroup>    
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.8" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
         <PackageReference Include="RestSharp" Version="109.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="MySqlConnector" Version="2.2.5" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Common\Common.csproj" />
       <ProjectReference Include="..\LoadBalancer\LoadBalancer.csproj" />
+      <None Include="searchapi-appsettings.json" />
+      <None Include="searchapi-appsettingsDevelopment.json" />
     </ItemGroup>
 
 </Project>

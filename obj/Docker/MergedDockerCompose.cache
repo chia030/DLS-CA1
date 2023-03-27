@@ -1,0 +1,96 @@
+name: dockercompose16325712434409092517
+services:
+  console-search:
+    build:
+      context: C:\Users\CVI\source\repos\DLS-CA1
+      dockerfile: ConsoleSearch/Dockerfile
+    depends_on:
+      load-balancer:
+        condition: service_started
+    networks:
+      default: null
+    restart: on-failure
+  load-balancer:
+    build:
+      context: C:\Users\CVI\source\repos\DLS-CA1
+      dockerfile: LoadBalancer/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "8071"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\CVI\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\CVI\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  search-api:
+    build:
+      context: C:\Users\CVI\source\repos\DLS-CA1
+      dockerfile: SearchAPI/Dockerfile
+    depends_on:
+      load-balancer:
+        condition: service_started
+      search-db:
+        condition: service_started
+    deploy:
+      replicas: 2
+    networks:
+      default: null
+    restart: on-failure
+  search-db:
+    environment:
+      MYSQL_DATABASE: search-database
+      MYSQL_PASSWORD: s3@rchd1v
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_USER: div-search
+    image: mysql
+    logging:
+      driver: none
+    networks:
+      default: null
+  web-search:
+    build:
+      context: C:\Users\CVI\source\repos\DLS-CA1
+      dockerfile: WebSearch/Dockerfile
+    depends_on:
+      load-balancer:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "8070"
+      protocol: tcp
+    restart: on-failure
+    volumes:
+    - type: bind
+      source: C:\Users\CVI\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\CVI\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose16325712434409092517_default

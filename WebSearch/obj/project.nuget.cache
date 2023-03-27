@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "imI6nwYbkmVbU8Jk+CJCcRKEthAw6zfEmmmTZe0ZZ3+A3KqvIihdLFPiBIuarHuJbbXLZgIDTCNlh0boxS6NNA==",
+  "dgSpecHash": "ZGLaLwMe8KoT/UWtZcYQQR9ATTUlDeu1+12oVolTs8t7BpxCNBrpFjdY363rJaLlIr8KI7pOK2y8x3bBwfvDzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\WebSearch\\WebSearch.csproj",
+  "projectFilePath": "c:\\Users\\CVI\\source\\repos\\DLS-CA1\\WebSearch\\WebSearch.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
+    "C:\\Users\\CVI\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -13,8 +13,9 @@ let ViewModel = function () {
     me.timeUsed = ko.observable();
     
     me.search = function() {
+        console.log("calling search function")
         $.ajax({
-            url: "http://localhost:8071/search/" + me.searchTerms() + "/10",
+            url: "http://localhost:8071/LB/SearchQuery?query=" + me.searchTerms() + "&maxAmount=10",
             success: function(data) {
                 data = JSON.parse(data);
                 console.log(data);
@@ -31,4 +32,5 @@ let ViewModel = function () {
     }
 
 };
+
 ko.applyBindings(new ViewModel());

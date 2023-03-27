@@ -5,6 +5,6 @@ namespace LoadBalancer.LoadBalancer
 {
     public interface ILoadBalancerStrategy
     {
-        public Service NextService(List<Service> services);
+        public Service? NextService(List<Service> services);
     }
 }

@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "31lLkeJqsoX0jfFmxtIpVhK6941BBkCYAXDsYWkNX4o9Jg/Utx1YuoKdr3N5AIth5YZTOfDHKtUBVoi4elRv5w==",
+  "dgSpecHash": "6C7UL1ZFQAH+RRU7nHBB/XG6e0q8ZK8Y9Oa9EHVgq74T+23bSe1TgMQRcFgRey1aTy26V7DsctkGvrnOwFtn7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Chiara\\Source\\Repos\\DLS-CA1\\Common\\Common.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Chiara\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "c:\\Users\\CVI\\source\\repos\\DLS-CA1\\Common\\Common.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,32 +1,71 @@
 version: '3.4'
 
 services:
-  indexer:
+  load-balancer:
     build:
       context: .
-      dockerfile: Indexer/Dockerfile
-    image: boulundeasv/searchengine-indexer:$BUILD_NUMBER
-    volumes:
-      - /Users/tbmh/DLS:/data
-  api:
-    build: 
-      context: .
-      dockerfile: "SearchAPI/Dockerfile"
-    image: boulundeasv/searchengine-api:$BUILD_NUMBER
+      dockerfile: "LoadBalancer/Dockerfile"
     ports:
       - 8071:80
-    volumes:
-      - /Users/tbmh/DLS:/data
-  web:
+  search-db:
+    image: "mysql"
+    environment: 
+      MYSQL_DATABASE: "search-database"
+      MYSQL_USER: "div-search"
+      MYSQL_PASSWORD: "s3@rchd1v"
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+    logging:
+      driver: none
+  search-api:
+    build:
+      context: .
+      dockerfile: "SearchAPI/Dockerfile"
+    deploy:
+      replicas: 2
+    restart: on-failure
+    depends_on:
+      - load-balancer
+      - search-db
+    command: >
+      bash -c 'dotnet /app/publish/SearchAPI.dll'
+    working_dir: /src/SearchAPI
+    tmpfs:
+      - /tmp
+    # Add unique suffix to output directory for each replica
+    deploy:
+      mode: replicated
+      replicas: 2
+      endpoint_mode: dnsrr
+      resources:
+        limits:
+          memory: 512M
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.role == worker
+      labels:
+        - "serach-engine.description=Search API"
+      update_config:
+        parallelism: 2
+        delay: 10s
+        order: start-first
+      # Add unique suffix to output directory for each replica
+      labels:
+        - "search-engine.output-dir=/app/publish$$"
+  console-search:
+    build:
+      context: .
+      dockerfile: "ConsoleSearch/Dockerfile"
+    restart: on-failure 
+    depends_on:
+      - load-balancer
+  web-search:
     build: 
       context: .
       dockerfile: "WebSearch/Dockerfile"
-    image: boulundeasv/searchengine-web:$BUILD_NUMBER
     ports:
       - 8070:80
-  test:
-    build:
-      context: .
-      dockerfile: "TestProject/Dockerfile"
-    volumes:
-      - /Users/tbmh/DLS:/data
+    restart: on-failure
+    depends_on:
+      - load-balancer
